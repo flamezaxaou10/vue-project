@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import vueproject from '@/components/vue-project'
+import home from '@/components/setname'
 
 Vue.use(Router)
 
@@ -8,8 +8,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'vue-project',
-      component: vueproject
+      name: 'home',
+      component: home
+    },
+    {
+      path: '/setting/',
+      name: 'setting',
+      component: home
     }
   ]
 })

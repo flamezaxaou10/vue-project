@@ -1,15 +1,23 @@
 <template>
-  <div class="hello">
-    <h1 class="blue-text">VUE-PROJECT</h1>
+  <div class="home">
+    <h1 class="blue-text" id="headd">ULTIMATE WEREWOLF</h1>
     <div class="row">
       <div class="col s12">
-
+        <router-link to="/setting"><button class="waves-effect waves-light btn blue" id="btn-w" >CREATE ROOM</button></router-link>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <button class="waves-effect waves-light btn blue" id="btn-w">JOIN ROOM</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  var Vue = require('vue')
+  var VueMaterial = require('vue-material')
+  Vue.use(VueMaterial)
   // Initialize Firebase
   var firebase = require('firebase')
 
@@ -24,10 +32,10 @@
   firebase.initializeApp(config)
 
   export default {
-    name: 'HelloWorld',
+    name: 'home',
     data () {
       return {
-        msg: 'Welcome to Your Vue.js App'
+
       }
     }
   }
@@ -35,6 +43,18 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.home {
+  font-family: 'Rubik Mono One', sans-serif;
+}
+#headd{
+  margin-bottom: 150px;
+}
+#btn-w{
+  width : 30%;
+  height: 120px;
+  margin-bottom: 150px;
+  font-size : 32px;
+}
 h1, h2 {
   font-weight: normal;
 }
